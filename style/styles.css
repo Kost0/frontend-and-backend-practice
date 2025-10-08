@@ -2,17 +2,23 @@ body {
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #a8e6cf 0%, #ffaaa5 100%);
+    background: #f0e9e3;
     min-height: 100vh;
-    height: 100%;
 }
 
 .page-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    background: rgb(230, 70, 70);
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffaaa5 100%);
     min-height: 100vh;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
 }
 
 .header, .footer {
@@ -28,6 +34,15 @@ body {
     letter-spacing: 2px;
 }
 
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+    margin-top: 50px;
+}
+
 .nav {
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(12px);
@@ -37,11 +52,12 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
     position: relative;
     z-index: 10;
+    grid-area: nav;
 }
 
 .nav-list {
     list-style: none;
-    margin: 5;
+    margin: 5px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -69,10 +85,11 @@ body {
     color: #2e4a3d
 }
 
-.content {
+main.content {
     padding: 40px;
     max-width: 900px;
     margin: 0 auto;
+    grid-area: main;
 }
 
 .profile-header {
@@ -114,12 +131,11 @@ body {
     line-height: 1.8;
 }
 
-.skills-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 .skill-tag {
@@ -131,6 +147,7 @@ body {
     font-size: 14px;
     box-shadow: 0 4px 15px rgba(168, 230, 207, 0.4);
     transition: all 0.3s ease; 
+    text-align: center;
 }
 
 .skill-tag:hover {
@@ -138,12 +155,59 @@ body {
     box-shadow: 0 6px 20px rgba(168, 230, 207, 0.5);
 }
 
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.goods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.goods-title {
+    text-align: center;
+}
+
+.goods-string {
+    font-size: 20px;
+}
+
+.experience-section {
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.good-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #f8f9fa;
+}
+
 .experience-card, .news-card, .good-card {
     background: rgba(255, 255, 255, 0.85);
     padding: 25px;
     margin: 20px 0;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     border-left: 4px solid #a8e6cf;
     transition: transform 0.3s ease;
 }
@@ -192,6 +256,21 @@ body {
     box-shadow: 0 3px 10px rgba(168, 230, 207, 0.4);
 }
 
-.footer {
-    margin-top: 50px;
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main.content {
+        padding: 20px;
+    }
 }
