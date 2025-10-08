@@ -9,16 +9,19 @@
 <body>
     <div class="page-container">
         <header class="header">
-            Хэдер
+            <h1 class="header__title">Мое портфолио</h1>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+                🌙 / ☀️
+            </button>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
@@ -26,27 +29,29 @@
             <div class="news-section">
                 <div class="news-grid">
                     <article class="news-card">
-                        <h3 class="news-title">Вы видели сколько нас?</h3>
-                        <p class="news-author">27.09.25 Константин</p>
-                        <p class="news-text">На момент того, как я пишу эту строку население нашей планеты составляет 8249028274, это ведь огогогогого как многогогогого</p>
+                        <h3 class="news-card__title">Вы видели сколько нас?</h3>
+                        <p class="news-card__author">27.09.25 Константин</p>
+                        <p class="news-card__text">На момент того, как я пишу эту строку население нашей планеты составляет 8249028274, это ведь огогогогого как многогогогого</p>
                     </article>
                     <article class="news-card">
-                        <h3 class="news-title">Шок</h3>
-                        <p class="news-author">24.09.25 Константин</p>
-                        <p class="news-text">Произошло что-то невообразимое, но что, никто не знает</p>
+                        <h3 class="news-card__title">Шок</h3>
+                        <p class="news-card__author">24.09.25 Константин</p>
+                        <p class="news-card__text">Произошло что-то невообразимое, но что, никто не знает</p>
                     </article>
                     <article class="news-card">
-                        <h3 class="news-title">Чудо</h3>
-                        <p class="news-author">23.09.25 Константин</p>
-                        <p class="news-text">АИ-95 теперь стоит всего 10 рублей за литр</p>
+                        <h3 class="news-card__title">Чудо</h3>
+                        <p class="news-card__author">23.09.25 Константин</p>
+                        <p class="news-card__text">АИ-95 теперь стоит всего 10 рублей за литр</p>
                     </article>
                 </div>
             </div>
         </main>
 
         <footer class="footer">
-            Футер
+            <p class="footer_text">&copy; 2025 Мой сайт</p>
         </footer>
     </div>
+
+    <script src="../js/theme.js"></script>
 </body>
 </html>

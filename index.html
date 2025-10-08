@@ -9,65 +9,81 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>Хэдер</h1>
+            <h1 class="header__title">Мое портфолио</h1>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+                🌙 / ☀️
+            </button>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="pages/contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
         <main class="content">
-            <article class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/avatar.jpg" alt="Фото автора" width="200" height="200">
-                
-                <h2 class="profile-name">Лавренов Константин Сергеевич</h2>
-                <p class="profile-group">ЭФБО-02-24</p>
+            <h1 class="profile__title">Информация об авторе</h1>
+            <article class="profile__card">
+                <img class="profile__photo" src="images/avatar.jpg" alt="Фото автора" width="200" height="200">
+                <div class="profile__info">
+                    <h2 class="profile__name">Лавренов Константин Сергеевич</h2>
+                    <p class="profile__group">ЭФБО-02-24</p>
+                </div>
             </article>
 
-            <section class="about-me">
-                <h2>Обо мне</h2>
-                <p>Туда сюда - миллионер</p>
-            </section>
-
-            <section class="skills-container">
-                <h2>Мои навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-tag">Фаербол</div>
-                    <div class="skill-tag">Крюк</div>
-                    <div class="skill-tag">Фриз</div>
-                    <div class="skill-tag">Секретная ульта</div>
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <div class="about_content">
+                    <p class="about__text">Туда сюда - миллионер</p>
                 </div>
             </section>
 
-            <section class="experience-section">
-                <h2 class="section-title">Мой опыт работы:</h2>
-                <div class="experience-grid">
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__list">
+                    <div class="skill">
+                        <span class="skill__name">Фаербол</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill__name">Крюк</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill__name">Фриз</span>
+                    </div>
+                    <div class="skill">
+                        <span class="skill__name">Секретная ульта</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы:</h2>
+                <div class="experience__grid">
                     <article class="experience-card">
-                        <h3 class="experience-title">Бездельничал</h3>
-                        <p class="experience-desc">Разве это не прекрасно?</p>
+                        <h3 class="experience-card__title">Бездельничал</h3>
+                        <p class="experience-card__desc">Разве это не прекрасно?</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Ходил за продуктами</h3>
-                        <p class="experience-desc">А как всем известо сдача шла в карман, а так и до миллиона не далеко да да да да</p>
+                        <h3 class="experience-card__title">Ходил за продуктами</h3>
+                        <p class="experience-card__desc">А как всем известо сдача шла в карман, а так и до миллиона не далеко да да да да</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Темка</h3>
-                        <p class="experience-desc">Тссс...</p>
+                        <h3 class="experience-card__title">Темка</h3>
+                        <p class="experience-card__desc">Тссс...</p>
                     </article>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
-            <p>Футер</p>
+            <p class="footer_text">&copy; 2025 Мой сайт</p>
         </footer>
     </div>
+
+    <script src="js/theme.js"></script>
 </body>
 </html>

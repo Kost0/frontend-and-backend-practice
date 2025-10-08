@@ -153,16 +153,19 @@
 <body>
     <div class="page-container">
         <header class="header">
-            Хэдер
+            <h1 class="header__title">Мое портфолио</h1>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+                🌙 / ☀️
+            </button>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item  nav__item--active"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
 
@@ -173,7 +176,7 @@
         </main>
 
         <footer class="footer">
-            Футер
+            <p class="footer_text">&copy; 2025 Мой сайт</p>
         </footer>
 
         <dialog id="contactModal">
@@ -270,5 +273,7 @@
             }
         </script>
     </div>
+
+    <script src="../js/theme.js"></script>
 </body>
 </html>
