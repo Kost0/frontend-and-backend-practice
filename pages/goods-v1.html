@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1 class="header__title">Мое портфолио</h1>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить тему">
+                🌙 / ☀️
+            </button>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div>
+                <h1 class="goods-title">Каталог товаров</h1> 
+            </div>
+            <div class="goods-string"> 
+                <p>Мы предлагаем широкий ассортимент качественных товаров по доступным ценам</p>
+            </div>
+            <div class="goods-grid">
+                <article class="good-card">
+                    <img class="good-card__image" src="../images/goods1.png" alt="Картинка товара 1" width="200" heght="200">
+                    <p class="good-card__name">Ян<p>
+                    <p class="good-card__price">Цена: 1000000$</p>
+                </article>
+                <article class="good-card">
+                    <img class="good-crad__image" src="../images/goods2.jpg" alt="Картинка товара 2" width="200" heght="200">
+                    <p class="good-card__name">Сбережения</p>
+                    <p class="good-card__price">Цена: 1000001$</p>
+                </article>
+                <article class="good-card">
+                    <img class="good-crad__image" src="../images/goods3.jpg" alt="Картинка товара 3" width="200" heght="200">
+                    <p class="good-card__name">Олег</p>
+                    <p class="good-card__price">Цена: 100002$</p>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer_text">&copy; 2025 Мой сайт</p>
+        </footer>
+    </div>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>
